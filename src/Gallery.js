@@ -1,6 +1,6 @@
 import React from "react";
 
-const AWS_BASE_URL = 'https://s3.amazonaws.com/kk-pix.ly';
+const AWS_BASE_URL = 'https://s3.us-west-1.amazonaws.com/kk-pix.ly';
 
 function Gallery({ imageData }) {
 
@@ -9,7 +9,7 @@ function Gallery({ imageData }) {
   return (
 
     <div className="Gallery">
-      {imageData.map(image => {
+      {imageData.photos.map(image => {
         return (
           <img src={`${AWS_BASE_URL}/${image.filename}`} alt={image.filename} />
         );

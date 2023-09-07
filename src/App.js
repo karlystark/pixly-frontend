@@ -9,9 +9,12 @@ function App() {
   const [imageData, setImageData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
+  // console.log("state at 12:", imageData, isLoading)
+
   useEffect(function fetchImageDataOnMount() {
     async function fetchImageData() {
       const data = await PixlyApi.getImages();
+      console.log("data is:", data)
       setImageData(data);
       setIsLoading(false);
     }
@@ -19,6 +22,7 @@ function App() {
   }, []);
 
   if (isLoading){return "loading images :)"};
+
 
   return (
     <div className="App">
