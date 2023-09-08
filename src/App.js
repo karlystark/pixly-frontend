@@ -9,6 +9,9 @@ function App() {
   const [imageData, setImageData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
+  console.log("STATE => IMAGEDATA=", imageData);
+
+
   // console.log("state at 12:", imageData, isLoading)
 
   useEffect(function fetchImageDataOnMount() {
@@ -21,6 +24,14 @@ function App() {
     fetchImageData();
   }, []);
 
+  async function uploadPhoto(formData){
+    const data = await PixlyApi.uploadImage(formData);
+    console.log("HERE'S WHAT WE GET BACK FROM API POST REQUEST=", data);
+    console.log("IMAGE DATA=", imageData);
+    setImageData(imageData => [...imageData, data]);
+  }
+
+
   if (isLoading){return "loading images :)"};
 
 
@@ -28,7 +39,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Nav />
-        <RoutesList imageData={imageData} />
+        <RoutesList imageData={imageData} uploadPhoto={uploadPhoto} />
       </BrowserRouter>
     </div>
   );

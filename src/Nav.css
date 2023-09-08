@@ -1,0 +1,23 @@
+/**  NAV BAR  */
+
+.pixly-icon {
+  color: black;
+  font-size: 2em;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+.navbar-upload {
+  text-decoration: none;
+  color: black;
+  position: relative;
+  left: 250px;
+}
+
+.navbar-upload:hover {
+  font-weight: bold;
+}
