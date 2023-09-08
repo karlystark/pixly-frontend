@@ -9,8 +9,8 @@ function Gallery({ imageData }) {
   const [selectedImg, setSelectedImg] = useState("");
 
 
-  function openImage(imgSrc) {
-    setSelectedImg(imgSrc);
+  function openImage(clickedImg) {
+    setSelectedImg(clickedImg);
     setIsDetailOpen(true);
   }
 
