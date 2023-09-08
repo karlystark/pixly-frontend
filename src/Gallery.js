@@ -22,7 +22,7 @@ function Gallery({ imageData }) {
   return (
     <>
       {isDetailOpen &&
-        <div className={isDetailOpen ? "detail open" : "detail"}>
+        <div className="detail open" >
           <ImageDetail selectedImg={selectedImg} closeImage={closeImage}
             imageData={imageData} />
         </div>
