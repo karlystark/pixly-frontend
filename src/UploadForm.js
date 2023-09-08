@@ -2,10 +2,22 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./UploadForm.css";
 
+
+/** UploadForm displays a photo upload form and redirects to homepage on submit
+ *
+ * props:
+ * - uploadPhoto => function
+ *
+ * state:
+ * - image => string that holds file data
+ * - errorMessages => an array of error messages
+ *
+ * RoutesList => UploadForm
+ */
 function UploadForm({ uploadPhoto }) {
 
   const [image, setImage] = useState("");
-  const [errorMessage, setErrorMessage] = useState([]);
+  const [errorMessages, setErrorMessages] = useState([]);
 
   const navigate = useNavigate();
 
@@ -22,7 +34,7 @@ function UploadForm({ uploadPhoto }) {
       setImage("");
       navigate("/");
     } catch (err) {
-      setErrorMessage(err);
+      setErrorMessages(err);
     }
   }
 
@@ -31,12 +43,19 @@ function UploadForm({ uploadPhoto }) {
     <div className="UploadForm">
       <label htmlFor="file">Choose file to upload</label>
       <div className="input-field">
-        <input type="file" accept=".jpg" id="file" name="file" onChange={handleChange} />
+        <input type="file"
+          accept=".jpg"
+          id="file"
+          name="file"
+          onChange={handleChange}
+        />
       </div>
-      <button className="btn btn-outline-light" onClick={handleSubmit}>Submit</button>
-      {errorMessage &&
+      <button className="btn btn-outline-light" onClick={handleSubmit}>
+        Submit
+      </button>
+      {errorMessages &&
         <div className="UploadForm-errors">
-          {errorMessage.map(err => <p>{err}</p>)}
+          {errorMessages.map(err => <p>{err}</p>)}
         </div>
       }
     </div>

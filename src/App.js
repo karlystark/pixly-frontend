@@ -5,6 +5,18 @@ import RoutesList from "./RoutesList";
 import { BrowserRouter } from "react-router-dom";
 import PixlyApi from "./api";
 
+
+/** App holds state for all images, processes photo upload and search by
+ * camera, renders Nav and RoutesList
+ *
+ * props: none
+ *
+ * state:
+ * - imageData => an array of image objects => {filename, camera, location, width, height}
+ * - isLoading => boolean
+ *
+ * App => Nav & RoutesList
+ */
 function App() {
   const [imageData, setImageData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -24,10 +36,9 @@ function App() {
     fetchImageData();
   }, []);
 
+
   async function uploadPhoto(formData) {
     const data = await PixlyApi.uploadImage(formData);
-    console.log("HERE'S WHAT WE GET BACK FROM API POST REQUEST=", data);
-    console.log("IMAGE DATA=", imageData);
     setImageData(imageData => [...imageData, data]);
   }
 
@@ -52,8 +63,8 @@ function App() {
       <BrowserRouter>
         <Nav />
         <RoutesList imageData={imageData}
-                    uploadPhoto={uploadPhoto}
-                    searchByCamera={searchByCamera}/>
+          uploadPhoto={uploadPhoto}
+          searchByCamera={searchByCamera} />
       </BrowserRouter>
     </div>
   );

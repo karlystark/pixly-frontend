@@ -21,3 +21,14 @@
 .navbar-upload:hover {
   font-weight: bold;
 }
+
+.navbar-search {
+  text-decoration: none;
+  color: black;
+  margin-right: 20px;
+  margin-left: -40px;
+}
+
+.navbar-search:hover {
+  font-weight: bold;
+}

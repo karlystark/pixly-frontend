@@ -1,6 +1,18 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./SearchForm.css";
 
+
+/** SearchForm displays a search form and redirects to homepage on submit
+ *
+ * props:
+ * - searchByCamera => function
+ *
+ * state:
+ * - keyword => string that holds formData from search input
+ *
+ * RoutesList => SearchForm
+ */
 function SearchForm({ searchByCamera }) {
 
   const [keyword, setKeyword] = useState("");
@@ -15,7 +27,6 @@ function SearchForm({ searchByCamera }) {
 
   async function handleSubmit(evt) {
     evt.preventDefault();
-
     searchByCamera(keyword);
     setKeyword("");
     navigate("/");

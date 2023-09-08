@@ -3,6 +3,20 @@ import "./ImageDetail.css";
 
 const AWS_BASE_URL = 'https://s3.us-west-1.amazonaws.com/kk-pix.ly';
 
+
+/** Image Detail displays an image detail page with metadata information and
+ * edit and download buttons
+ *
+ * props:
+ * - imageData => an array of image objects =>
+ *                {filename, camera, location, width, height}
+ * - selectedImg => string representing filename of image that has been selected
+ * - closeImage => function passed from parent component
+ *
+ * state: none
+ *
+ * Gallery => ImageDetail
+ */
 function ImageDetail({ selectedImg, closeImage, imageData }) {
 
   return (
@@ -10,11 +24,12 @@ function ImageDetail({ selectedImg, closeImage, imageData }) {
       <div className="img-container">
         <i className="close-icon bi bi-x" onClick={() => closeImage()}></i>
         <img src={`${AWS_BASE_URL}/${selectedImg}`} alt={selectedImg} />
-        {imageData.filter(img => img.filename === selectedImg).map(filteredImg => (
+        {imageData.filter(img => img.filename === selectedImg).map(filteredImg =>
+        (
           <div className="image-details" key={filteredImg.filename}>
             {filteredImg.camera &&
               <div className="camera-details">
-               <i className="bi bi-camera"></i><h5>{filteredImg.camera}</h5>
+                <i className="bi bi-camera"></i><h5>{filteredImg.camera}</h5>
               </div>
             }
             {filteredImg.location &&
