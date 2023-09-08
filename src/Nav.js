@@ -10,11 +10,7 @@ function Nav(){
     <a className="navbar-brand" href="/">Pix.ly</a>
     </div>
     <a className="navbar-upload" href="/upload">Upload Image</a>
-    <form className="d-flex" role="search">
-      <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-      </input>
-      <button className="btn btn-outline-success" type="submit">Search</button>
-    </form>
+    <a className="navbar-search" href="/search">Search by Camera</a>
   </div>
 </nav>
 );

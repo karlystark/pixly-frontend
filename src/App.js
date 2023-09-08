@@ -31,6 +31,11 @@ function App() {
     setImageData(imageData => [...imageData, data]);
   }
 
+  async function searchByCamera(formData) {
+    const data = await PixlyApi.getImageByCameraSearchTerm(formData);
+    setImageData(data);
+    setIsLoading(false);
+  }
 
   if (isLoading) {
     return (
@@ -46,7 +51,9 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Nav />
-        <RoutesList imageData={imageData} uploadPhoto={uploadPhoto} />
+        <RoutesList imageData={imageData}
+                    uploadPhoto={uploadPhoto}
+                    searchByCamera={searchByCamera}/>
       </BrowserRouter>
     </div>
   );
