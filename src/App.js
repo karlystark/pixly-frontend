@@ -17,14 +17,14 @@ function App() {
   useEffect(function fetchImageDataOnMount() {
     async function fetchImageData() {
       const data = await PixlyApi.getImages();
-      console.log("data is:", data)
+      console.log("data is:", data);
       setImageData(data);
       setIsLoading(false);
     }
     fetchImageData();
   }, []);
 
-  async function uploadPhoto(formData){
+  async function uploadPhoto(formData) {
     const data = await PixlyApi.uploadImage(formData);
     console.log("HERE'S WHAT WE GET BACK FROM API POST REQUEST=", data);
     console.log("IMAGE DATA=", imageData);
@@ -32,7 +32,14 @@ function App() {
   }
 
 
-  if (isLoading){return "loading images :)"};
+  if (isLoading) {
+    return (
+      <div className="LoadingMessage">
+        <p>loading images </p>
+        <i className="bi bi-emoji-smile"></i>
+      </div>
+    );
+  };
 
 
   return (
