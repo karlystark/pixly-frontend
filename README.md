@@ -2,7 +2,7 @@
 
 # Pix.ly
 
-Pix.ly allows users to upload photos to their pix.ly board and view metadata about those photos (including the camera used and location). Future implementations will include light photo editing capabilities, searching by metadata and tags, and user-contribution alt text for accessibility. 
+Pix.ly allows users to upload photos to their pix.ly board and view metadata about those photos (including the camera used and location). Users also contribute custom alt-text for their images. Future implementations will include light photo editing capabilities and searching by metadata and tags. 
 
 ## Stack
 Pix.ly's frontend was built using React.js and was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
