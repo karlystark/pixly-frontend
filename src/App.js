@@ -51,7 +51,7 @@ function App() {
   if (isLoading) {
     return (
       <div className="LoadingMessage">
-        <p>loading images </p>
+        <p>loading... </p>
         <i className="bi bi-emoji-smile"></i>
       </div>
     );

@@ -47,7 +47,7 @@ function Gallery({ imageData }) {
             <div className="pics" key={image.filename}
               onClick={() => openImage(image.filename)}>
               <img src={`${AWS_BASE_URL}/${image.filename}`}
-                alt={image.filename}
+                alt={image.alt}
               />
             </div>
           );
