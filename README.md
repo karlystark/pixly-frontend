@@ -13,8 +13,7 @@ Pix.ly's initial full-stack framework was built in collaboration with Kirra Hyde
 ## Demo (as of 10/2023)
 
 
-
-https://github.com/karlystark/pixly-frontend/assets/110060273/c414fdf3-c37c-4f3e-b75b-613ce1554f85
+https://github.com/karlystark/pixly-frontend/assets/110060273/6f12b6d5-c8f3-46dc-9141-4d99d4e7a7c9
 
 
 
