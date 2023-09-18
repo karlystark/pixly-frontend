@@ -46,7 +46,11 @@ i {
   float: right;
   font-size: 3em;
   margin-right: -60px;
-  margin-top: -40px;
+  margin-top: -10px;
+}
+
+.img-container i {
+  color: white;
 }
 
 .img-container .close-icon:hover {
