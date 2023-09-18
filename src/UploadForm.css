@@ -1,3 +1,5 @@
+/******** Upload Form Container  *******/
+
 .UploadForm {
   display: flex;
   flex-direction: column;
@@ -10,26 +12,41 @@
   margin: 0 120px;
 }
 
-.UploadForm label {
-  font-size: 1.8em;
-  margin-top: -10px;
-}
 .input-field {
-  /* display: flex; */
-  margin: 30px;
+  /* margin: 30px; */
   margin-bottom: 20px;
-  margin-top: 40px;
+  margin-top: 30px;
+  /* margin-right: 30px; */
 }
 
-.UploadFormAltText label {
-  font-size: 1.2em;
-}
-
-.UploadForm button {
+.submitbtn {
   text-decoration: none;
   border-radius: 5px;
   padding: 8px;
 }
+
+/******** Upload Form File Upload Section  *******/
+
+.UploadFormFileUpload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.UploadFormFileUpload label {
+  font-size: 2.4em;
+  margin-top: -25px;
+}
+
+.file-field {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+
+/******** Upload Form Alt-Text Upload Section  *******/
 
 .UploadFormAltText {
   display: flex;
@@ -37,7 +54,32 @@
   align-items: center;
 }
 
+.UploadFormAltText label {
+  font-size: 1.2em;
+  margin-top: 2px;
+}
+
+.UploadFormAltText div {
+  margin-left: 20px;
+}
+
+.UploadFormAltText input {
+  font-size: 1.1em;
+}
+
+.altbtn {
+  padding: 5px 15px;
+  margin-left: 20px;
+
+}
+
+
+/******** Alt-Text Instructions Modal *******/
+
 .altTextInstructions {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   background-color: white;
   color: black;
   border-radius: 6px;
@@ -47,11 +89,65 @@
 
 .altTextInstructions i {
   position: absolute;
-  color: black;
-  margin-left: 700px;
-  margin-top: -70px;
+  margin-left: 5px;
+  margin-top: -2px;
 }
 
-.altTextInstructions i:hover {
+.altTextInstructions li {
+  font-size: 1.1em;
+}
+
+.altTextInstructions h2 {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  margin-left: 20px;
+  font-size: 2.2em;
+}
+
+.altTextInstructionsTitle {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  border-radius: 6px;
+  margin-top: 50px;
+}
+
+.altTextInstructionsDemo {
+  margin-left: 0px;
+  margin-top: 30px;
+}
+
+.altTextInstructionsDemo p {
+  font-size: 1.1em;
+  margin-top: 5px;
+}
+
+.exampleText {
+  rotate: -10deg;
+  background-color: black;
+  color: white;
+  font-size: 1em;
+  border-radius: 6px;
+  max-width: 160px;
+  margin-bottom: -50px;
+  margin-left: -10px;
+  text-align: center;
+}
+
+
+.bi-x {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-right: 20px;
+  color: black;
+}
+
+.bi-x:hover {
   color: goldenrod;
 }
+
+.bi-emoji-smile {
+  color: white;
+}
+

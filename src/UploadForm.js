@@ -58,17 +58,19 @@ function UploadForm({ uploadPhoto }) {
   return (
 
     <div className="UploadForm">
-      <label htmlFor="file">Choose file to upload</label>
-      <div className="input-field">
-        <input type="file"
-          accept=".jpg"
-          id="file"
-          name="file"
-          onChange={handleFileChange}
-        />
+      <div className="UploadFormFileUpload">
+        <label htmlFor="file">Choose file to upload</label>
+        <div className="input-field file-field">
+          <input type="file"
+            accept=".jpg"
+            id="file"
+            name="file"
+            onChange={handleFileChange}
+          />
+        </div>
         <div className="UploadFormAltText">
-          <label htmlFor="altText">Input alt-text </label>
-          <button className="btn btn-outline-light" onClick={toggleAltTextInstructions}>
+          <label htmlFor="altText">Provide alt-text </label>
+          <button className="btn btn-outline-light altbtn" onClick={toggleAltTextInstructions}>
             ?
           </button>
           <div className="input-field">
@@ -80,12 +82,13 @@ function UploadForm({ uploadPhoto }) {
           </div>
         </div>
       </div>
-      <button className="btn btn-outline-light" onClick={handleSubmit}>
+      <button className="btn btn-outline-light submitbtn" onClick={handleSubmit}>
         Submit
       </button>
       {altTextReveal &&
         <div className="altTextInstructions">
-          <h2>How to write good alt-text</h2>
+          <div className="altTextInstructionsTitle">
+          <h2>How do I write good alt-text?</h2>
           <i className="close-icon bi bi-x" onClick={() => toggleAltTextInstructions()}></i>
           <ul>
             <li>
@@ -98,12 +101,17 @@ function UploadForm({ uploadPhoto }) {
               repetitive for users <i className="bi bi-emoji-smile"></i>
             </li>
           </ul>
+          </div>
+          <div className="altTextInstructionsDemo">
+            <div className="exampleText">
           <p>a nice example:</p>
+          </div>
           <img src="/21.jpg" alt="five cats sit on cement in front of a blue painted backyard garage" />
           <p>
-            alt text: five cats sit on cement in front of a blue painted
+            alt-text: five cats gather in front of a blue-painted
             backyard garage.
           </p>
+          </div>
         </div>}
       {isLoading &&
         <p>uploading image now...</p>}
