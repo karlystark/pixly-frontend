@@ -70,7 +70,7 @@ function UploadForm({ uploadPhoto }) {
         </div>
         <div className="UploadFormAltText">
           <label htmlFor="altText">Provide alt-text </label>
-          <button className="btn btn-outline-light altbtn" onClick={toggleAltTextInstructions}>
+          <button className="btn btn-outline-light altbtn" onClick={toggleAltTextInstructions} title="how do I write good alt-text?">
             ?
           </button>
           <div className="input-field">
