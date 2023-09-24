@@ -15,14 +15,14 @@
   text-decoration: none;
   color: black;
   position: relative;
-  left: 200px;
+  right: 50px;
 }
 
 .navbar-upload:hover {
   font-weight: bold;
 }
 
-.navbar-search {
+/* .navbar-search {
   text-decoration: none;
   color: black;
   margin-right: 20px;
@@ -31,4 +31,4 @@
 
 .navbar-search:hover {
   font-weight: bold;
-}
+} */

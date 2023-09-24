@@ -18,7 +18,6 @@ function Nav() {
           <a className="navbar-brand" href="/">Pix.ly</a>
         </div>
         <a className="navbar-upload" href="/upload">Upload Image</a>
-        <a className="navbar-search" href="/search">Search by Camera</a>
       </div>
     </nav>
   );
