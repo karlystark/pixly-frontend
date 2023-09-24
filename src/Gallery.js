@@ -38,7 +38,7 @@ function Gallery({ imageData }) {
       {isDetailOpen &&
         <div className="detail open" >
           <ImageDetail selectedImg={selectedImg} closeImage={closeImage}
-            imageData={imageData} />
+            imageData={imageData}/>
         </div>
       }
       <div className="Gallery">

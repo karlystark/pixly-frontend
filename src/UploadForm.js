@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import AltCard from "./AltCard";
 import "./UploadForm.css";
+
 
 
 /** UploadForm displays a photo upload form and redirects to homepage on submit
@@ -70,7 +72,9 @@ function UploadForm({ uploadPhoto }) {
         </div>
         <div className="UploadFormAltText">
           <label htmlFor="altText">Provide alt-text </label>
-          <button className="btn btn-outline-light altbtn" onClick={toggleAltTextInstructions} title="how do I write good alt-text?">
+          <button className="btn btn-outline-light altbtn"
+            onClick={toggleAltTextInstructions}
+            title="what's alt-text?">
             ?
           </button>
           <div className="input-field">
@@ -86,33 +90,8 @@ function UploadForm({ uploadPhoto }) {
         Submit
       </button>
       {altTextReveal &&
-        <div className="altTextInstructions">
-          <div className="altTextInstructionsTitle">
-          <h2>How do I write good alt-text?</h2>
-          <i className="close-icon bi bi-x" onClick={() => toggleAltTextInstructions()}></i>
-          <ul>
-            <li>
-              alt-text is a short, concise, and clear description of your
-              image that will provide a textual alternative for folks who use
-              screen readers
-            </li>
-            <li>
-              be sure not to include "image of" in your alt-text - this is
-              repetitive for users <i className="bi bi-emoji-smile"></i>
-            </li>
-          </ul>
-          </div>
-          <div className="altTextInstructionsDemo">
-            <div className="exampleText">
-          <p>a nice example:</p>
-          </div>
-          <img src="/21.jpg" alt="five cats sit on cement in front of a blue painted backyard garage" />
-          <p>
-            alt-text: five cats gather in front of a blue-painted
-            backyard garage.
-          </p>
-          </div>
-        </div>}
+        <AltCard closeCard={toggleAltTextInstructions} />
+      }
       {isLoading &&
         <p>uploading image now...</p>}
       {errorMessages &&

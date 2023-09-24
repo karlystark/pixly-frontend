@@ -1,0 +1,76 @@
+/******** Alt-Text Instructions Modal *******/
+
+.altTextInstructions {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  color: black;
+  border-radius: 6px;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.altTextInstructions i {
+  position: absolute;
+  margin-left: 5px;
+  margin-top: -2px;
+}
+
+.altTextInstructions li {
+  font-size: 1.1em;
+}
+
+.altTextInstructions h2 {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  margin-left: 20px;
+  font-size: 2.2em;
+}
+
+.altTextInstructionsTitle {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  border-radius: 6px;
+  margin-top: 50px;
+}
+
+.altTextInstructionsDemo {
+  margin-left: 0px;
+  margin-top: 30px;
+}
+
+.altTextInstructionsDemo p {
+  font-size: 1.1em;
+  margin-top: 5px;
+}
+
+.exampleText {
+  rotate: -10deg;
+  background-color: black;
+  color: white;
+  font-size: 1em;
+  border-radius: 6px;
+  max-width: 160px;
+  margin-bottom: -50px;
+  margin-left: -10px;
+  text-align: center;
+}
+
+
+.bi-x {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-right: 20px;
+  color: black;
+}
+
+.bi-x:hover {
+  color: goldenrod;
+}
+
+.bi-emoji-smile {
+  color: white;
+}

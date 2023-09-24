@@ -19,11 +19,14 @@ const AWS_BASE_URL = 'https://s3.us-west-1.amazonaws.com/kk-pix.ly';
  */
 function ImageDetail({ selectedImg, closeImage, imageData }) {
 
+  const alt = (imageData.filter(img => img.filename === selectedImg))[0].alt;
+  const url = `${AWS_BASE_URL}/${selectedImg}`;
+
   return (
     <div className="ImageDetail">
       <div className="img-container">
         <i className="close-icon bi bi-x" onClick={() => closeImage()}></i>
-        <img src={`${AWS_BASE_URL}/${selectedImg}`} alt={selectedImg} />
+        <img src={url} alt={alt} />
         {imageData.filter(img => img.filename === selectedImg).map(filteredImg =>
         (
           <div className="image-details" key={filteredImg.filename}>
@@ -42,7 +45,9 @@ function ImageDetail({ selectedImg, closeImage, imageData }) {
       </div>
       <div className="button-container">
         <button className="btn btn-outline-light edit-button">edit</button>
+        <a href={url} download>
         <button className="btn btn-outline-light download-button">download</button>
+        </a>
       </div>
     </div>
   );
