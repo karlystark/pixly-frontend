@@ -2,10 +2,11 @@
 
 # Pix.ly
 
-Pix.ly allows users to upload photos to their pix.ly board and view metadata about those photos (including the camera used and location). Future implementations will include light photo editing capabilities, searching by metadata and tags, and user-contribution alt text for accessibility. 
+Pix.ly is a photo gallery app that allows users to upload photos to their pix.ly board & view metadata related to those photos (including the camera used and location). Users contribute custom alt-text for their images to ensure accessibility. Future implementations will include light photo editing capabilities and searching by metadata and tags. 
 
 ## Stack
 Pix.ly's frontend was built using React.js and was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Pix.ly's backend and API were built using Python/Flask, PostgreSQL, and AWS S3 for photo storage.
 
 ## Collaboration
 Pix.ly's initial full-stack framework was built in collaboration with Kirra Hyde in Rithm32 :) 
@@ -14,7 +15,8 @@ Pix.ly's initial full-stack framework was built in collaboration with Kirra Hyde
 
 
 
-https://github.com/karlystark/pixly-frontend/assets/110060273/c414fdf3-c37c-4f3e-b75b-613ce1554f85
+https://github.com/karlystark/pixly-frontend/assets/110060273/807d3a4f-cadc-4642-b89f-9f70510fc361
+
 
 
 
