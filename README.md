@@ -22,13 +22,24 @@ https://github.com/karlystark/pixly-frontend/assets/110060273/807d3a4f-cadc-4642
 
 
 
-### `npm start`
+## Get Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To run this project locally, please perform the following steps:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clone the repository
+
+ `git clone https://github.com/karlystark/shed-frontend.git`
+
+2. Install dependencies at the root directory
+
+ `npm install`
+
+3. Run your server
+
+ `npm start`
+
+4. Open http://localhost:3000 to view Shed in your browser. 
+
 
 
 
