@@ -28,7 +28,7 @@ To run this project locally, please perform the following steps:
 
 1. Clone the repository
 
- `git clone https://github.com/karlystark/shed-frontend.git`
+ `git clone https://github.com/karlystark/pixly-frontend.git`
 
 2. Install dependencies at the root directory
 
